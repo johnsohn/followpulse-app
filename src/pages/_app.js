@@ -50,14 +50,7 @@ export default function App({ Component, pageProps }) {
     searchParams.forEach((value, key) => {
       paramsObject[key] = value;
     });
-    mixpanel.track("page_view",{
-      path: pathname,
-      query: paramsObject,
-      host: window.location.origin,
-    });
 
-    //fbq('track', 'PageView');
-    //analyticsInstance.page();
   }, [pathname, searchParams]);
 
   return (

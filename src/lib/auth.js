@@ -184,7 +184,7 @@ function useAuthProvider() {
     }
     // access token in url
     else {
-        mixpanel.track("signin");
+        
     }
 
     // Subscribe to user on mount
@@ -311,74 +311,6 @@ function useIdentifyUser(user, { enabled }) {
     //console.log("identifyuser checks",user,enabled,user&&enabled)
     if (user && enabled) {
       console.log("reinit fb pixel with the sauce");
-
-
-      // mixpanel identification
-      if (window.mixpanel)
-        mixpanel.identify(user.id);
-
-      var mp_people = {};
-
-      if (user.nMessagesSub == 20000)
-        mp_people['plan'] = "elite";
-      else if (user.nMessagesSub == 5000)
-        mp_people['plan'] = "gold";
-      else
-        mp_people['plan'] = 'free';
-
-      if (user.billing_start)
-      {
-        var period_delta = new Date(user.billing_end).getTime() - new Date(user.billing_start).getTime();
-        var inhours = period_delta / 1000 / 60 / 60 / 24;
-        if (inhours < 31)
-          mp_people['period'] = 'monthly';
-        else
-          mp_people['period'] = 'annual';
-      }
-      if (window.mixpanel)
-        mixpanel.people.set(mp_people);
-
-      // fb
-
-      var _sentfb = localStorage.getItem("sentfbpixel");
-      if (_sentfb)
-      {
-        ('init', _sentfb, {
-          em: user?.email || null,
-          external_id: user?.id || null
-        });
-      }
-
-      /*
-      // medward pixel
-      fbq('init', '1123339422146833', {
-        em: user?.email || null,
-        external_id: user?.id || null
-      } )
-      // main pixel
-      fbq('init', '599589515668598', {
-        em: user?.email || null,
-        external_id: user?.id || null
-      } )
-      */
-
-      // identify user
-      //analytics.identify(user.uid,{
-      //  email:user?.email || undefined
-      //});
-
-      /*
-      var myevent = "login"
-      var deltatime = new Date().getTime() - new Date(user.last_sign_in_at).getTime()// - new Date(user.confirmed_at).getTime()
-      if (didFire != user.uid && deltatime < 60000)
-      {
-        setFire(user.uid);
-        console.log("fire auth event",myevent)
-        // the mighty google analytics code
-        analytics.track(myevent, {})
-        saEvent(myevent);
-      }
-      */
 
 
 
