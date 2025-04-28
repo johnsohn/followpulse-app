@@ -62,8 +62,8 @@ export default function SecretAdmirers() {
         {/* Footer */}
         <footer className="mt-12 text-center space-y-4">
           <div className="flex justify-center items-center space-x-2">
-            <img src="/logo.png" alt="InstaMetrics" className="w-8 h-8" />
-            <span className="font-semibold">InstaMetrics</span>
+            <img src="/logo.png" alt="FollowPulse" className="w-8 h-8" />
+            <span className="font-semibold">FollowPulse</span>
           </div>
           <p className="text-gray-500">Profile Analyzer</p>
           <div className="flex justify-center space-x-4 text-sm text-gray-500">

@@ -45,7 +45,7 @@ const TipsAndInsights = () => {
           We have prepared some tips to help improve the{' '}
           <span className="text-blue-500">performance</span> of your Instagram account.
         </p>
-        
+
       </div>
 
       {/* Engagement Tips */}
@@ -119,11 +119,11 @@ const TipsAndInsights = () => {
       <div className="flex justify-center items-center gap-2 mt-8">
         <Image
           src="/logo.png"
-          alt="InstaMetrics"
+          alt="FollowPulse"
           width={40}
           height={40}
         />
-        <span className="text-sm font-medium">InstaMetrics</span>
+        <span className="text-sm font-medium">FollowPulse</span>
       </div>
     </div>
   )
