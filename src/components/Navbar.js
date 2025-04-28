@@ -7,14 +7,14 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   const menuItems = [
-    { icon: '💡', title: 'Tips & Insights', href: '/tips' },
-    { icon: '❤️', title: 'Secret Admirers', href: '/admirers' },
-    { icon: '🔍', title: 'Detect Stalkers', href: '/security' },
-    { icon: '🔒', title: 'Password safety', href: '/password' },
-    { icon: '🔔', title: 'News', href: '/news' },
+    { icon: '💡', title: 'Tips & Insights', href: '/dashboard/insights' },
+    { icon: '❤️', title: 'Secret Admirers', href: '/dashboard/admirers' },
+    { icon: '🔍', title: 'Detect Stalkers', href: '/dashboard/security' },
+    { icon: '🔒', title: 'Password safety', href: '/dashboard/password-safety' },
+    //{ icon: '🔔', title: 'News', href: '/news' },
     { icon: '📄', title: 'Terms of Service', href: '/terms' },
     { icon: '🛡️', title: 'Privacy Policy', href: '/privacy' },
-    { icon: '💳', title: 'My Plan', href: '/plan' },
+    { icon: '💳', title: 'My Plan', href: '/dashboard/plan' },
   ]
 
   return (

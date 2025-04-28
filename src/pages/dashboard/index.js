@@ -9,7 +9,7 @@ export default function Home() {
       <Navbar />
       <div className="max-w-md mx-auto pt-16">
         {/* Top Trends Section */}
-        <div className="bg-violet-100 rounded-xl p-4 mb-4">
+        <div className="bg-violet-100 rounded-xl p-4 mb-4 hidden">
           <h2 className="text-lg font-bold text-violet-800 mb-3">
             UNCOVER 2025'S TOP INSTAGRAM TRENDS
           </h2>
@@ -52,15 +52,16 @@ export default function Home() {
             title="Password safety"
             description="Find out if all your passwords are securely protected"
             icon="🔑"
-            href="/dashboard/password"
+            href="/dashboard/password-safety"
           />
-
+          {/*
           <FeatureCard
             title="News"
             description="Stay up to date with current and popular trends"
             icon="☁️"
             href="/dashboard/news"
           />
+          */}
         </div>
 
         {/* Instagram PRO Section */}
