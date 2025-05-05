@@ -64,7 +64,7 @@ export default function Home() {
           */}
         </div>
 
-        {/* Instagram PRO Section */}
+        {/* Instagram PRO Section
         <div className="mt-6 bg-violet-100 rounded-xl p-4">
           <div className="flex items-center justify-between">
             <div>
@@ -82,6 +82,7 @@ export default function Home() {
             />
           </div>
         </div>
+        */}
 
         {/* Footer */}
         <footer className="mt-8 text-center">

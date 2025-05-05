@@ -43,7 +43,7 @@ const TipsAndInsights = () => {
         <h1 className="text-xl font-semibold mb-2">Tips & Insights</h1>
         <p className="text-sm">
           We have prepared some tips to help improve the{' '}
-          <span className="text-blue-500">performance</span> of your Instagram account.
+          <span className="text-green-500">performance</span> of your Instagram account.
         </p>
 
       </div>
@@ -101,7 +101,7 @@ const TipsAndInsights = () => {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Footer
       <div className="text-center mb-8">
         <img src="/bell.webp" className="w-40 mx-auto mb-2"/>
         <p className="text-sm mb-4">
@@ -114,6 +114,7 @@ const TipsAndInsights = () => {
           Read news →
         </Link>
       </div>
+      */}
 
       {/* Bottom Logo */}
       <div className="flex justify-center items-center gap-2 mt-8">

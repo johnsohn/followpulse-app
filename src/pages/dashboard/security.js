@@ -100,7 +100,7 @@ const StalkerDetection = () => {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Footer
       <div className="text-center mb-8">
         <img src="/shield.webp" className="w-40 mx-auto mb-2"/>
         <p className="text-sm mb-4">
@@ -113,6 +113,7 @@ const StalkerDetection = () => {
           Learn More →
         </Link>
       </div>
+      */}
 
       {/* Bottom Logo */}
       <div className="flex justify-center items-center gap-2 mt-8">

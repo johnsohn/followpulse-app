@@ -1,8 +1,24 @@
 // pages/secret-admirers.js
 import Link from 'next/link';
-
+import {useEffect,useState} from "react"
 
 export default function SecretAdmirers() {
+
+  const [isCancel,setCancel] = useState(false);
+
+  useEffect(()=>{
+    var ckid = setInterval(()=>{
+      if (typeof localStorage !== "undefined" && localStorage?.cancelled && !isCancel)
+        setCancel(true);
+    },200)
+    return ()=>{clearInterval(ckid)}
+  },[])
+
+  const cancel = ()=>{
+    setCancel(true);
+    localStorage.cancelled=true;
+  }
+
   return (
     <div className="max-w-md mx-auto p-4 bg-white min-h-screen bg-gradient-to-r from-blue-100/50 to-violet-100/50">
       {/* Header */}
@@ -36,11 +52,11 @@ export default function SecretAdmirers() {
 
         </div>
         <div className="flex flex-col gap-2">
-        <span>You are currently subscribed to FollowPulse. Your next billing period is 5/14/2025.</span>
-        <button className="bg-red-500 text-white p-1 rounded">Cancel</button>
+        <span>You are currently subscribed to FollowPulse. {isCancel ? "You have cancelled your plan and won't be billed again." :"Your next billing period is 5/14/2025."}</span>
+        {!isCancel && (<button onClick={()=>{cancel()}} className="bg-red-500 text-white p-1 rounded">Cancel</button>)}
         </div>
 
-        {/* Newsletter Section */}
+        {/* Newsletter Section
         <div className="mt-12 text-center space-y-4">
           <img src="/bell.webp" alt="Bell" className="mx-auto w-40" />
           <h2 className="font-semibold">
@@ -51,6 +67,7 @@ export default function SecretAdmirers() {
             Read news
           </button>
         </div>
+        */}
 
         {/* Footer */}
         <footer className="mt-12 text-center space-y-4">
@@ -58,7 +75,6 @@ export default function SecretAdmirers() {
             <img src="/logo.png" alt="FollowPulse" className="w-8 h-8" />
             <span className="font-semibold">FollowPulse</span>
           </div>
-          <p className="text-gray-500">Profile Analyzer</p>
           <div className="flex justify-center space-x-4 text-sm text-gray-500">
             <Link href="/terms">Terms of Service</Link>
             <Link href="/privacy">Privacy Policy</Link>

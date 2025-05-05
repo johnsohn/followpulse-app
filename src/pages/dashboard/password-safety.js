@@ -3,6 +3,9 @@ import Link from 'next/link';
 
 
 export default function SecretAdmirers() {
+
+
+
   return (
     <div className="max-w-md mx-auto p-4 bg-white min-h-screen bg-gradient-to-r from-blue-100/50 to-violet-100/50">
       {/* Header */}
@@ -27,7 +30,7 @@ export default function SecretAdmirers() {
         </div>
 
         <div className="h-[0.5px] w-full my-8 bg-black/50" />
-        {/* Newsletter Section */}
+        {/* Newsletter Section
         <div className="mt-12 text-center space-y-4">
           <img src="/bell.webp" alt="Bell" className="mx-auto w-40" />
           <h2 className="font-semibold">
@@ -38,6 +41,7 @@ export default function SecretAdmirers() {
             Read news
           </button>
         </div>
+        */}
 
         {/* Footer */}
         <footer className="mt-12 text-center space-y-4">
@@ -45,7 +49,6 @@ export default function SecretAdmirers() {
             <img src="/logo.png" alt="FollowPulse" className="w-8 h-8" />
             <span className="font-semibold">FollowPulse</span>
           </div>
-          <p className="text-gray-500">Profile Analyzer</p>
           <div className="flex justify-center space-x-4 text-sm text-gray-500">
             <Link href="/terms">Terms of Service</Link>
             <Link href="/privacy">Privacy Policy</Link>
