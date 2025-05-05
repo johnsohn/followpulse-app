@@ -2,8 +2,10 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import {useRouter} from "next/router"
 
 export default function Navbar() {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false)
 
   const menuItems = [
@@ -70,6 +72,7 @@ export default function Navbar() {
               <button
                 onClick={() => {
                   // Add logout logic here
+                  router.replace("/");
                   setIsOpen(false)
                 }}
                 className="flex items-center space-x-3 text-red-500 hover:text-red-600"
